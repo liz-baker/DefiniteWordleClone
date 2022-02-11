@@ -13,16 +13,18 @@ app.use('/api/current',(req, res) => {
 // app.listen(80, () => console.log('listening!'));
 
 async function testGame() {
-game.getCurrentWord(5).then(w => console.log(w));
+  await game.clearStore();
 
-await game.checkWord('arise');
-await game.checkWord('apple');
-await game.checkWord('smile');
-await game.checkWord('pecan');
-await game.checkWord('aoeub');
-await game.checkWord('cmeao');
-await game.checkWord('shhhe');
-await game.checkWord('arise');
+  game.getCurrentWord(5).then(w => console.log(w));
+
+  await game.checkWord('arise');
+  await game.checkWord('apple');
+  await game.checkWord('smile');
+  await game.checkWord('pecan');
+  await game.checkWord('aoeub');
+  await game.checkWord('cmeao');
+  await game.checkWord('shhhe');
+  await game.checkWord('arise');
 }
 
 testGame();

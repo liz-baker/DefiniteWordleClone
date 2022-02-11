@@ -15,6 +15,10 @@ class Game {
   async checkWord(word) {
     return this.store.checkWord(word);
   }
+
+  async clearStore() {
+    return this.store.clearStorage();
+  }
 }
 
 module.exports = { Game }

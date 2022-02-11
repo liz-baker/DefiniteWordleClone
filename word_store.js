@@ -89,6 +89,10 @@ class WordStore {
       }
     });
   }
+
+  async clearStorage() {
+    return this.db.empty();
+  }
 }
 
 module.exports = { WordStore }

@@ -22,6 +22,7 @@ async function getRandomWord(size) {
     return response.data.word.toLowerCase();
   }).catch(function(error) {
     console.error(error);
+    throw new Error();
   });
 }
 
@@ -45,8 +46,12 @@ async function checkWord(word) {
     return response.data.word.toLowerCase() === word.toLowerCase();
   }).catch(function(error) {
     // TODO: Retry logic?
-    // console.error(error);
-    return false;
+    console.error(error);
+    if (error.response.status === 404) {
+      return false;
+    }
+    
+    throw new Error();
   });
 }
 
