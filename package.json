@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "@replit/database": "^2.0.1",
+    "async-mutex": "^0.3.2",
+    "axios": "^0.25.0",
+    "express": "^4.17.2",
+    "moment": "^2.29.1",
+    "node-emoji": "^1.11.0"
+  },
+  "name": "definitewordleclone",
+  "version": "1.0.0",
+  "description": "A wordle clone with customizable word length",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Elizabeth Baker (elizabeth@bakerhub.net",
+  "license": "ISC"
+}
